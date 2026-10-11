@@ -1,0 +1,36 @@
+:root{font-family:Arial,Helvetica,sans-serif;color:#352a25;background:#fffaf4;line-height:1.5}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0}.container{width:min(1080px,92%);margin:auto}.topo{background:#854521;color:#fff}.cabecalho{display:flex;flex-direction:column;gap:14px;padding:17px 0}.marca{font-size:1.3rem;font-weight:bold;color:#fff;text-decoration:none}nav{display:flex;flex-wrap:wrap;gap:14px}nav a{color:#fff;text-decoration:none;font-size:.91rem}nav a:hover,nav a:focus-visible{text-decoration:underline}.carrinho-link span{background:#f7cd76;color:#43220f;border-radius:30px;padding:3px 8px}.hero{background:#f8e5cd;border-radius:16px;margin-top:24px;padding:30px;display:flex;align-items:center;justify-content:space-between;gap:20px}.hero h1{font-size:clamp(1.8rem,5vw,2.9rem);line-height:1.15;margin:8px 0}.etiqueta{font-size:.86rem;font-weight:bold;text-transform:uppercase;color:#854521}.ilustra{font-size:5rem;text-align:center;line-height:1.2}.secao{padding:28px 0;border-bottom:1px solid #e8d8c5}.secao h2{margin:0 0 8px;font-size:1.5rem}.secao>p{color:#695b51;margin-top:0}label{display:block;font-weight:600;margin:9px 0 6px}select,input{font:inherit;width:100%;padding:11px;border:1px solid #ac9d92;border-radius:8px;background:white}.secao>select{max-width:340px}.grade{display:grid;grid-template-columns:1fr;gap:18px}.produto{background:white;border:1px solid #e6d6c5;border-radius:14px;overflow:hidden}.produto img{display:block;width:100%;height:175px;object-fit:cover;background:#ddd}.produto-info{padding:15px}.produto-info small{color:#786557}.produto-info h3{margin:4px 0}.preco{font-size:1.18rem;font-weight:bold;color:#783f22}.botao{display:inline-block;padding:11px 18px;border:0;border-radius:8px;background:#854521;color:#fff;text-decoration:none;font:inherit;font-weight:600;cursor:pointer}.botao:hover:not(:disabled){background:#633015}.botao:disabled{background:#8c8882;cursor:not-allowed}.painel,.aviso{max-width:750px;background:white;border:1px solid #e6d6c5;border-radius:12px;padding:20px}.aviso{background:#fff1da}.item{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px solid #e8e1d8}.acoes{display:flex;align-items:center;gap:10px}.acoes button{font-size:1.1rem;border:1px solid #96775d;background:#fff4e6;width:34px;height:34px;border-radius:6px;cursor:pointer}.total{font-size:1.2rem;font-weight:bold;text-align:right;padding:16px 0}.opcao{font-weight:normal;display:flex;align-items:flex-start;gap:8px}.opcao input{width:auto;margin:6px 0 0}fieldset{border:1px solid #dbc9b5;border-radius:8px;margin:17px 0}legend{font-weight:bold}.link-simples{border:0;background:none;padding:0;color:#854521;text-decoration:underline;cursor:pointer;font:inherit}.oculto{display:none}.rodape{text-align:center;padding:25px 10px;background:#382a20;color:#fff;margin-top:20px}.mensagem{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#292b25;color:white;border-radius:9px;padding:12px 18px;max-width:90%;display:none;box-shadow:0 3px 12px #0004}.mensagem.mostrar{display:block}:focus-visible{outline:3px solid #e2a444;outline-offset:3px}@media(min-width:650px){.grade{grid-template-columns:repeat(2,minmax(0,1fr))}.cabecalho{flex-direction:row;justify-content:space-between;align-items:center}.hero{padding:44px}}@media(min-width:950px){.grade{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+.descricao-produto{margin:5px 0;color:#695b51;font-size:.92rem}.hero>div:first-child{max-width:670px}
+
+
+/* Barra de seleção e versões de apresentação: as funções usam o mesmo JavaScript. */
+.barra-versoes{display:flex;align-items:center;justify-content:center;gap:10px 17px;flex-wrap:wrap;padding:10px 12px;background:#f3ece4;border-bottom:1px solid #e6d6c5;font-size:.86rem}
+.barra-versoes span{font-weight:700;color:#594636}
+.barra-versoes a{color:#70401f;text-decoration:none;padding:3px 7px;border-radius:5px}
+.barra-versoes a:hover,.barra-versoes a:focus-visible{background:#ead7c6;text-decoration:underline}
+.modo-responsivo .barra-versoes a[href="index.html"],.modo-desktop .barra-versoes a[href="index-desktop.html"],.modo-mobile .barra-versoes a[href="index-mobile.html"],.modo-tablet .barra-versoes a[href="index-tablet.html"]{background:#854521;color:white;text-decoration:none}
+/* As três páginas abaixo simulam larguras de tela sem precisar abrir DevTools. */
+.modo-mobile{max-width:430px;margin:0 auto;min-height:100vh;border-left:1px solid #dfd1c4;border-right:1px solid #dfd1c4;background:#fffaf4}
+.modo-mobile .container{width:calc(100% - 28px)}
+.modo-mobile .cabecalho{flex-direction:column;align-items:flex-start;gap:12px}
+.modo-mobile nav{gap:9px 13px}
+.modo-mobile nav a{font-size:.83rem}
+.modo-mobile .hero{padding:24px 18px;margin-top:18px}
+.modo-mobile .hero h1{font-size:1.65rem}
+.modo-mobile .grade{grid-template-columns:1fr}
+.modo-mobile .item{align-items:flex-start;flex-direction:column}
+.modo-mobile .secao{padding:22px 0}
+.modo-mobile .barra-versoes{font-size:.76rem;gap:5px}
+.modo-mobile .barra-versoes a{padding:3px 5px}
+.modo-tablet{max-width:820px;margin:0 auto;min-height:100vh;border-left:1px solid #dfd1c4;border-right:1px solid #dfd1c4;background:#fffaf4}
+.modo-tablet .grade{grid-template-columns:repeat(2,minmax(0,1fr))}
+.modo-tablet .container{width:93%}
+.modo-tablet .hero{padding:35px}
+.modo-tablet .cabecalho{flex-direction:row;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.modo-desktop{min-width:960px;background:#fffaf4}
+.modo-desktop .grade{grid-template-columns:repeat(3,minmax(0,1fr))}
+.modo-desktop .container{width:min(1120px,94%)}
+.modo-desktop .cabecalho{flex-direction:row;justify-content:space-between;align-items:center}
+.modo-desktop .hero{padding:46px}
+/* Evita rolagem lateral não intencional em telas reais menores. */
+@media(max-width:959px){.modo-desktop{min-width:0}}

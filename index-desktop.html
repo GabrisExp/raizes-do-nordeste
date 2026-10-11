@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#854521">
+  <title>Raízes do Nordeste | Versão Computador</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/dados.js" defer></script>
+  <script src="js/carrinho.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body class="modo-desktop">
+  <div class="barra-versoes" aria-label="Escolher visualização">
+    <span>Visualização:</span>
+    <a href="index.html">Responsiva</a>
+    <a href="index-desktop.html">Computador</a>
+    <a href="index-mobile.html">Celular</a>
+    <a href="index-tablet.html">Tablet</a>
+  </div>
+  <header class="topo">
+    <div class="container cabecalho">
+      <a class="marca" href="#inicio">Raízes do Nordeste</a>
+      <nav aria-label="Menu principal">
+        <a href="#inicio">Início</a><a href="#cardapio">Cardápio</a><a href="#promocoes">Promoções</a><a href="#pedidos">Meu pedido</a>
+        <a class="carrinho-link" href="#carrinho">Carrinho <span id="contador">0</span></a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <section id="inicio" class="hero">
+      <div><p class="etiqueta">Sabores da nossa terra</p><h1>Comida nordestina, do seu jeito.</h1><p>Escolha a unidade, monte seu pedido e acompanhe a retirada.</p><a class="botao" href="#cardapio">Ver cardápio</a></div>
+      
+    </section>
+    <section class="secao" aria-labelledby="unidades-titulo">
+      <h2 id="unidades-titulo">Escolha sua unidade</h2><p>Os itens disponíveis mudam conforme a unidade.</p>
+      <label for="unidade">Unidade de atendimento</label>
+      <select id="unidade"></select>
+    </section>
+    <section class="secao" id="cardapio"><h2>Nosso cardápio</h2><p>Selecione os produtos para montar seu pedido.</p><div id="produtos" class="grade"></div></section>
+    <section class="secao" id="promocoes"><h2>Promoções e fidelidade</h2><div class="aviso"><strong>Programa de pontos</strong><p>Ganhe 1 ponto a cada R$ 10 em pedidos aprovados. Seus pontos: <strong><span id="pontos">0</span> ponto(s)</strong>.</p></div></section>
+    <section class="secao" id="carrinho"><h2>Meu carrinho</h2><div class="painel"><div id="itens-carrinho"></div><div class="total">Total: <span id="total">R$ 0,00</span></div><button class="botao" id="abrir-finalizacao" type="button">Finalizar pedido</button></div></section>
+    <section class="secao oculto" id="finalizacao"><h2>Finalizar pedido</h2><form id="form-pedido" class="painel">
+      <label for="nome">Nome para retirada</label><input id="nome" required minlength="2" maxlength="80" autocomplete="name" placeholder="Seu nome">
+      <label for="email">E-mail</label><input id="email" required type="email" autocomplete="email" placeholder="voce@exemplo.com">
+      <label for="modalidade">Modalidade de atendimento</label><select id="modalidade"><option value="Retirada no balcão">Retirada no balcão</option><option value="Pedido no totem">Pedido no totem</option></select>
+      <fieldset><legend>Pagamento</legend><label class="opcao"><input type="radio" name="pagamento" value="aprovado" checked> Pagamento aprovado</label><label class="opcao"><input type="radio" name="pagamento" value="recusado"> Pagamento recusado</label></fieldset>
+      <label class="opcao"><input id="privacidade" type="checkbox" required> Li as <button id="ver-privacidade" type="button" class="link-simples">informações de privacidade</button> sobre o uso dos dados do pedido.</label>
+      <label class="opcao"><input id="marketing" type="checkbox"> Quero receber promoções (opcional).</label>
+      <button class="botao" type="submit">Confirmar pagamento</button>
+    </form></section>
+    <section class="secao" id="pedidos"><h2>Acompanhar pedido</h2><div id="pedido-atual" class="painel"><p>Nenhum pedido confirmado nesta sessão.</p></div></section>
+    <section class="secao" id="privacidade-texto"><h2>Privacidade</h2><p>Nome e e-mail são utilizados para identificar o pedido. O recebimento de promoções é opcional.</p></section>
+  </main>
+  <footer class="rodape">Trabalho desenvolvido pelo aluno Gabriel Flauzino • RU 4873398</footer>
+  <div id="mensagem" class="mensagem" role="status" aria-live="polite"></div>
+</body>
+</html>
